@@ -1,0 +1,54 @@
+* {
+    margin:0;
+    padding:0;
+}
+h1{
+    text-align:center;
+    margin:20px 0;
+}
+
+#dm_area{
+    width:70%;
+    height: 400px;
+    margin:20px auto;
+    border:1px solid #999;
+    position:relative;
+    overflow: hidden;
+
+}
+form{
+    width:20%;
+    margin:0 auto;
+}
+form #dm_content {
+    display:block;
+    width:100%;
+    height:30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+form button {
+    width:100px;
+    height:30px;
+    margin-left:20px;
+    border:none;
+    font-size:17px;
+    font-family:"Simhei";
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+
+}
+.danmu {
+    position:absolute;
+    font-size:20px;
+    left:100%;
+    width:100%;
+}
+form button:active {
+    position:relative;
+    top:1px;
+}
+form #send {
+    background:orange;
+}
