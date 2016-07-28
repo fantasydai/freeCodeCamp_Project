@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Bree Serif', serif;
+    background-color:#333;
+    color:#333;
+}
+.container {
+    width:450px;
+    margin:12% auto auto;
+    padding:20px 30px;
+    border:1px solid #000;
+    border-radius: 5px;
+    background-color:#fff;
+}
+.quote-content {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.quote-author {
+    text-align: right;
+}
+.buttons {
+    overflow: hidden;
+}
+.button {
+      height:38px;
+      border:none;
+      border-radius:3px;
+      color:#fff;
+      background-color:#333;
+      outline:none;
+      font-size:0.85em;
+      padding: 8px 18px 6px 18px;
+      margin-top:30px;
+      opacity:1;
+      cursor:pointer;
+}
+.button:hover {
+    opacity:0.9;
+}
+#weibo-quote {
+    margin-right: 20px;
+}
+#weibo-quote,#search-quote {
+    float:left;
+    padding: 8px 7px 0;
+    height:30px;
+    width:40px;
+    text-align:center;
+    vertical-align: middle;
+}
+#new-quote {
+    float:right;
+}
