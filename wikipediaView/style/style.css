@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #66CC99;
+    width:100%;
+    font-family: "PingFangSC-Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.header {
+    width:100%;
+}
+.logo {
+    margin:100px 0 20px 35%;
+    width:30%;
+}
+.search {
+    width:40%;
+    margin-left: 30%;
+}
+.search .searchText {
+    margin-bottom: 20px;
+}
+.search .searchButton {
+    margin-right: 30px;
+}
+.search .btn:active {
+    position: relative;
+    top:1px;
+}
+.contentArea {
+    width:70%;
+    margin:0 auto;
+}
+.contentArea li {
+    background-color:#fff;
+    list-style: none;
+    padding-left: 10px;
+    margin-top:20px;
+}
+.contentArea li:hover {
+    border-left: 4px solid #FF9900;
+}
+.contentArea li a{
+    color:#000;
+    overflow: hidden;
+}
+.contentArea li:hover a{
+    color:#66CC99;
+}
+.contentArea .wiki-title {
+    font-size: 1.5em;
+}
+.contentArea .wiki-content {
+    font-size: 1.2em;
+}
