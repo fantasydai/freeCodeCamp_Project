@@ -1,9 +1,8 @@
 function getWiki(val) {
     if(val) {
-        $.getJSON("http://zh.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch="+
+        $.getJSON("http://zh.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=15&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=2&exlimit=max&gsrsearch="+
              encodeURIComponent(val)+"&callback=?",function (data) {
                 showWiki(data.query.pages);
-                console.log(data.query.pages);
             });
     }
 }
@@ -26,17 +25,36 @@ function getWiki(val) {
             wiki_li.append(wiki_a);
             wiki_ul.append(wiki_li);
         }
+        $(".contentArea").empty();
         $(".contentArea").append(wiki_ul);
     }
+
+    //loading动画函数
+    function loading () {
+        var divOuter = $("<div></div>");
+        for(var i = 1; i < 13; i ++) {
+            var divInner = $("<div></div>");
+            divInner.addClass("sk-circle sk-circle"+i);
+            divOuter.append(divInner);
+        }
+        divOuter.addClass("sk-fading-circle");
+        $(".contentArea").append(divOuter);
+    }
+
 $(document).ready(function() {
     $(".searchButton").click(function() {
         var searchText = $(".searchText").val();
         if(searchText) {
-            $(".contentArea").empty();
+            loading ();
             getWiki(searchText);
         } else {
             alert("请输入有效内容");
         }
         $(".searchText").val("");
     });
+    $(".searchText").keyup(function (event) {
+        if(event.keyCode ==13)  {
+            $(".searchButton").trigger("click");
+        }
+    })
 });
