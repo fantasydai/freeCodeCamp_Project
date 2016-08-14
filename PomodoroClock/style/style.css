@@ -4,7 +4,7 @@
 }
 body {
     background-color: #2A2C31;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', "Microsoft YaHei",sans-serif;
 }
 #container {
     width:500px;
@@ -79,7 +79,6 @@ body {
     bottom:0;
     margin:0 auto;
     width:100%;
-    height:200px;
 }
 .animate-area .missionAm {
     background-color:#FF6A6A;
